@@ -15,7 +15,6 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: process.env.VERCEL_ENV === "production",
   },
   trailingSlash: false,
-  swcMinify: true,
   logging: {
     fetches: {
       fullUrl: true,
