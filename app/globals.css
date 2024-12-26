@@ -5,17 +5,145 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #6D1EB2;
+  --secondary: #262DAA;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */
+
+@layer base {
+  html {
+    @apply scroll-smooth bg-background text-foreground;
+  }
+
+  /* body {
+    font-family: Arial, Helvetica, sans-serif;
+  } */
+
+  body {
+    @apply relative flex min-h-screen w-full flex-col justify-between scroll-smooth text-base font-medium tracking-normal text-foreground antialiased;
+
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-feature-settings: "pnum";
+    text-rendering: geometricPrecision;
+    font-feature-settings: "pnum";
+    font-variant-numeric: proportional-nums;
+    font-variant-ligatures: common-ligatures discretionary-ligatures;
+  }
+
+  ::selection {
+    @apply bg-foreground text-background;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-sans font-medium tracking-normal first-letter:capitalize;
+  }
+
+  /* .display {
+    @apply;
+  }
+
+  h1 {
+    @apply;
+  }
+
+  h2 {
+    @apply;
+  }
+
+  h3 {
+    @apply;
+  }
+
+  h4 {
+    @apply;
+  }
+
+  h5 {
+    @apply;
+  }
+
+  h6 {
+    @apply;
+  } */
+
+  p {
+    /* @apply; */
+
+    a {
+      @apply underline decoration-2 transition-all;
+
+      strong {
+        /* @apply; */
+      }
+    }
+  }
+
+  strong {
+    @apply font-bold;
+  }
+
+  ul li strong {
+    /* @apply; */
+  }
+
+  pre {
+    @apply overflow-auto p-8;
+  }
+
+  code {
+    @apply font-mono text-sm;
+  }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
+}
+
+@layer components {
+  .container {
+    @apply w-full max-w-screen-xl px-6 sm:px-20 md:px-8 lg:px-10;
+  }
+
+  .marquee-end .rfm-initial-child-container,
+  .marquee-end .rfm-marquee {
+    /* @apply flex flex-row items-start gap-8 */
+    align-items: flex-end !important;
+  }
+
+  .marquee-start .rfm-initial-child-container,
+  .marquee-start .rfm-marquee {
+    /* @apply flex flex-row items-start gap-8 */
+    align-items: flex-start !important;
+  }
 }
