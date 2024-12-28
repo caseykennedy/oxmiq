@@ -2,17 +2,16 @@ import { type MetadataRoute } from "next"
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Customer.io Platform",
-    short_name: "Customer.io",
-    description:
-      "Explore Customer.io, the data-driven platform for personalized customer journeys across all channels, fueled by first-party data.",
+    name: "Oxmiq Labs",
+    short_name: "Oxmiq",
+    description: "Reimagining the GPU for real-time interactive AI",
     start_url: "/",
     scope: "/",
     display: "standalone",
     orientation: "portrait",
     lang: "en",
-    background_color: "#0b2428",
-    theme_color: "#e4ffce",
+    background_color: "#f6f6fd",
+    theme_color: "#000000",
     icons: [
       {
         src: "/web-app-manifest-192x192.png",
