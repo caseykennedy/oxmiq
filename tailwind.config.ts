@@ -25,6 +25,9 @@ export default {
       borderColor: {
         DEFAULT: "var(--foreground)",
       },
+      borderWidth: {
+        6: "6px",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
