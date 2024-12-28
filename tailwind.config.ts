@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 
 export default {
   content: [
@@ -34,6 +34,7 @@ export default {
         primary: "var(--primary)",
         secondary: "var(--secondary)",
         accent: "var(--accent)",
+        highlight: "var(--highlight)",
       },
       fontSize: {
         base: "1rem",
@@ -98,4 +99,4 @@ export default {
     require("tailwindcss-animate"),
     require("@tailwindcss/container-queries"),
   ],
-} satisfies Config;
+} satisfies Config

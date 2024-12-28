@@ -1,16 +1,16 @@
-"use client";
+"use client"
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
 
-import { cn } from "~/lib/utils";
+import { cn } from "~/lib/utils"
 
 interface MeteorsProps {
-  number?: number;
+  number?: number
 }
 export const Meteors = ({ number = 20 }: MeteorsProps) => {
   const [meteorStyles, setMeteorStyles] = useState<Array<React.CSSProperties>>(
-    [],
-  );
+    []
+  )
 
   useEffect(() => {
     const styles = [...new Array(number)].map(() => ({
@@ -18,9 +18,9 @@ export const Meteors = ({ number = 20 }: MeteorsProps) => {
       left: Math.floor(Math.random() * window.innerWidth) + "px",
       animationDelay: Math.random() * 1 + 0.2 + "s",
       animationDuration: Math.floor(Math.random() * 8 + 2) + "s",
-    }));
-    setMeteorStyles(styles);
-  }, [number]);
+    }))
+    setMeteorStyles(styles)
+  }, [number])
 
   return (
     <>
@@ -29,16 +29,16 @@ export const Meteors = ({ number = 20 }: MeteorsProps) => {
         <span
           key={idx}
           className={cn(
-            "animate-meteor bg-accent pointer-events-none absolute left-1/2 top-1/2 size-1 rotate-[215deg] rounded-full shadow-[0_0_0_1px_#ffffff10]",
+            "pointer-events-none absolute left-1/2 top-1/2 size-1 rotate-[215deg] animate-meteor rounded-full bg-accent shadow-[0_0_0_1px_#ffffff10]"
           )}
           style={style}
         >
           {/* Meteor Tail */}
-          <div className="from-primary via-accent pointer-events-none absolute top-1/2 -z-10 h-1 w-[50px] -translate-y-1/2 bg-gradient-to-r to-transparent" />
+          <div className="pointer-events-none absolute top-1/2 -z-10 h-1 w-[50px] -translate-y-1/2 bg-gradient-to-r from-primary via-accent to-transparent" />
         </span>
       ))}
     </>
-  );
-};
+  )
+}
 
-export default Meteors;
+export default Meteors
