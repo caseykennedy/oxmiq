@@ -11,6 +11,16 @@ export default {
     container: {
       center: true,
     },
+    // screens: {
+    //   sm: "576px",
+    //   // => @media (min-width: 576px) { ... }
+
+    //   md: "960px",
+    //   // => @media (min-width: 960px) { ... }
+
+    //   lg: "1440px",
+    //   // => @media (min-width: 1440px) { ... }
+    // },
     extend: {
       borderColor: {
         DEFAULT: "var(--foreground)",
@@ -20,6 +30,7 @@ export default {
         foreground: "var(--foreground)",
         primary: "var(--primary)",
         secondary: "var(--secondary)",
+        accent: "var(--accent)",
       },
       fontSize: {
         base: "1rem",
@@ -29,7 +40,7 @@ export default {
         "spin-fast": "spin 0.5s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        meteor: "meteor 5s linear infinite",
+        meteor: "meteor 9s linear infinite",
         shine: "shine var(--duration) infinite linear",
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
       },
@@ -46,7 +57,7 @@ export default {
           "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
           "70%": { opacity: "1" },
           "100%": {
-            transform: "rotate(215deg) translateX(-500px)",
+            transform: "rotate(215deg) translateX(-900px)",
             opacity: "0",
           },
         },
