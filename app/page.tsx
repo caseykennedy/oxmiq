@@ -38,7 +38,7 @@ function Header() {
 function Main() {
   return (
     <main className="relative flex grow flex-col items-start justify-end overflow-hidden p-4 sm:p-6">
-      <h2 className="mb-24 max-w-[18ch] text-[40px] font-normal leading-none sm:text-5xl md:text-6xl lg:text-7xl">
+      <h2 className="mb-12 max-w-[18ch] text-[40px] font-normal leading-none sm:mb-16 sm:text-5xl md:mb-24 md:text-6xl lg:text-7xl">
         Reimagining the GPU for real-time interactive AI
       </h2>
       <Link
