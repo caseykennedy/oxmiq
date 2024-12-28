@@ -9,11 +9,11 @@ export default function Home() {
   return (
     <ShineBorder
       borderRadius={0}
-      borderWidth={6}
-      className="flex grow rounded-none md:m-8"
+      borderWidth={32}
+      className="flex grow rounded-none"
       color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
     >
-      <div className="flex grow flex-col border-6 border-black">
+      <div className="z-10 m-4 flex grow flex-col border-6 border-black bg-background sm:m-6 md:m-8">
         <Header />
         <Main />
       </div>
