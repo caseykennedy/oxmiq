@@ -5,35 +5,17 @@
 :root {
   --background: #f6f6fd;
   --foreground: #000000;
+  --highlight: #e7e7ee;
 
   --primary: #6d1eb2;
   --secondary: #262daa;
-  --accent: #FFBE7B;
-  --highlight: #e7e7ee;
+  --accent: #ffbe7b;
 }
-
-.dark {
-  :root {
-    --background: #000000;
-    --foreground: #f6f6fd;
-  }
-}
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000000;
-    --foreground: #f6f6fd;
-  }
-} */
 
 @layer base {
   html {
     @apply scroll-smooth bg-background text-foreground;
   }
-
-  /* body {
-    font-family: Arial, Helvetica, sans-serif;
-  } */
 
   body {
     @apply relative flex min-h-svh w-full flex-col justify-between scroll-smooth text-base font-medium tracking-normal text-foreground antialiased;
@@ -57,63 +39,42 @@
   h4,
   h5,
   h6 {
-    @apply font-sans font-medium tracking-normal first-letter:capitalize;
-  }
-
-  /* .display {
-    @apply;
   }
 
   h1 {
-    @apply;
+    @apply text-h3 sm:text-h2 lg:text-h1;
   }
 
   h2 {
-    @apply;
+    @apply text-h4 sm:text-h3 lg:text-h2;
   }
 
   h3 {
-    @apply;
+    @apply text-h5 sm:text-h4 lg:text-h3;
   }
 
   h4 {
-    @apply;
+    @apply text-h6 sm:text-h5 lg:text-h4;
   }
 
   h5 {
-    @apply;
+    @apply text-h6 md:text-h5 lg:text-h5;
   }
 
   h6 {
-    @apply;
-  } */
+    @apply text-h6;
+  }
 
   p {
-    /* @apply; */
+    @apply text-p;
 
     a {
       @apply underline decoration-2 transition-all;
-
-      strong {
-        /* @apply; */
-      }
     }
   }
 
   strong {
     @apply font-bold;
-  }
-
-  ul li strong {
-    /* @apply; */
-  }
-
-  pre {
-    @apply overflow-auto p-8;
-  }
-
-  code {
-    @apply font-mono text-sm;
   }
 }
 

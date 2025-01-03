@@ -1,9 +1,12 @@
 // import Image from "next/image";
-import { ArrowRightIcon, MailCheckIcon } from "lucide-react"
 import Link from "next/link"
+
+import { ArrowRightIcon } from "lucide-react"
 
 import Meteors from "~/components/ui/meteors"
 import ShineBorder from "~/components/ui/shine-border"
+
+import Logo from "~/components/logo"
 
 export default function Home() {
   return (
@@ -13,7 +16,7 @@ export default function Home() {
       className="flex grow rounded-none"
       color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
     >
-      <div className="z-10 m-4 flex grow flex-col border-6 border-black bg-background sm:m-6 md:m-8">
+      <div className="z-10 m-4 flex grow flex-col border-4 border-black bg-background sm:m-6 md:m-8">
         <Header />
         <Main />
       </div>
@@ -23,13 +26,15 @@ export default function Home() {
 
 function Header() {
   return (
-    <header className="flex flex-row border-b-6">
+    <header className="flex flex-row border-b-4">
       <h1 className="flex-1 place-content-end p-4 text-3xl font-bold uppercase tracking-tight sm:p-6 sm:text-7xl sm:font-medium md:text-8xl lg:text-[10vw]">
         Oxmiq Labs
       </h1>
-      <div className="flex items-center border-l-6 p-4 sm:p-6">
-        {/* <div className="aspect-square rounded-full border-6 sm:size-[230px] sm:border-[14px]"></div> */}
-        <div className="aspect-square size-16 rounded-full bg-gradient-to-tr from-secondary via-primary to-accent sm:size-32 md:size-48 lg:size-64" />
+      <div className="flex items-center border-l-4 p-4 sm:p-6">
+        {/* <div className="aspect-square rounded-full border-4 sm:size-[230px] sm:border-[14px]"></div> */}
+        <div className="aspect-square size-16 rounded-full sm:size-32 md:size-48 lg:size-64">
+          <Logo />
+        </div>
       </div>
     </header>
   )

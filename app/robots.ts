@@ -1,23 +1,17 @@
-import { type MetadataRoute } from "next";
+import { type MetadataRoute } from "next"
 
-import { getBaseUrl } from "~/lib/constants";
+import { getBaseUrl } from "~/lib/constants"
 
-const baseUrl = getBaseUrl();
+const baseUrl = getBaseUrl()
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: [
-        "/api",
-        "/studio",
-        "/resources",
-        "/we-hate-spam",
-        "/resources/announcements/update-to-compromised-email-addresses-incident",
-      ],
+      disallow: ["/api"],
     },
     sitemap: `${baseUrl}/sitemap.xml`,
     host: baseUrl,
-  };
+  }
 }
