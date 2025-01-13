@@ -7,9 +7,17 @@
   --foreground: #000000;
   --highlight: #e7e7ee;
 
+  --border: #000000;
+
   --primary: #6d1eb2;
   --secondary: #262daa;
   --accent: #ffbe7b;
+
+  .dark {
+    --background: #000000;
+    --foreground: #f6f6fd;
+    --highlight: #1D1D1F;
+  }
 }
 
 @layer base {

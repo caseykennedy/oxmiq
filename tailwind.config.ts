@@ -15,7 +15,7 @@ export default {
     },
     extend: {
       borderColor: {
-        DEFAULT: "var(--foreground)",
+        DEFAULT: "var(--border)",
       },
       borderWidth: {
         6: "6px",
@@ -36,8 +36,8 @@ export default {
         h4: ["2.827rem", { lineHeight: "1.45", fontWeight: "500" }],
         h5: ["1.999rem", { lineHeight: "1.55", fontWeight: "500" }],
         h6: ["1.414rem", { lineHeight: "1.65", fontWeight: "500" }],
-        p: ["1.25rem", { lineHeight: "1.3", fontWeight: "500" }],
-        small: ["0.707rem", { lineHeight: "1.4", fontWeight: "500" }],
+        p: ["1.75rem", { lineHeight: "1.3", fontWeight: "500" }],
+        small: ["1.25rem", { lineHeight: "1.3", fontWeight: "500" }],
       },
       animation: {
         "spin-slow": "spin 3s linear infinite",
